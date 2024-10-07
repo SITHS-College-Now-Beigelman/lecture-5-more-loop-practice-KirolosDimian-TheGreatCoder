@@ -41,8 +41,10 @@ int main() // This is the function "main"
         // If loop being made to see if he used Debit
         if (Type_Of_Transaction == ("Debit"))
         {
-            // Updating the Money in the bank after the transaction after the math
+            // Updating the Money in the bank after the transaction after the math for Debit
             Money_In_DaBank = Money_In_DaBank - Value_Of_Transaction;
+            
+            // Updating how many more transactions they wanted to do left for the counter
             Number_Of_Transactions = Number_Of_Transactions - 1;
             
             // Printing statement after each time
@@ -53,26 +55,36 @@ int main() // This is the function "main"
             debit = debit + Value_Of_Transaction;
         }
 
+        // If loop being mad to see if he used Credit
         if (Type_Of_Transaction == ("Credit"))
         {
+            // Updating the money in the bank after the transaction after the math for Credit
             Money_In_DaBank = Money_In_DaBank + Value_Of_Transaction;
+
+            // Updating how many more transactions they wanted to do left for the counter
             Number_Of_Transactions = Number_Of_Transactions - 1;
+
+            // Printing statement after each time
             cout << "Your final balance after the transactions is $" << Money_In_DaBank << endl;
             cout << endl;
+
+            // To calculate the total credit over time
             credit = credit + Value_Of_Transaction;
 
         }
 
     }
-        
+    
+    // Print statements for the required extra credit saying how much debit and credit today with the final amount left
     cout << "The total debit amount today is $" << debit << " and the amount of credit today is $" << credit << endl;
     cout << "The final amount of money in the bank is $" << Money_In_DaBank << endl;
 
+    // To end the code
     return 0;
 
 }
 
-/*
+/* Output of my code
 
 How much money did your bank accound have at the start of the day?
 500.00 
